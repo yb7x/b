@@ -1,0 +1,383 @@
+/* 初始化 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #83858B;
+}
+
+input,
+button {
+    border: 0;
+    outline: none;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+}
+
+a:hover {
+    color: red;
+}
+
+body {
+    background-color: #1F1F1F;
+}
+
+/* 导航条 */
+.nav {
+    margin: 0 auto;
+    width: 1200px;
+    height: 70px;
+    background-color: #1F1F1F;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_left {
+    width: 650px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 15px;
+}
+
+.nav_left_log {
+    flex-grow: 1;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.nav_left_log img {
+    width: auto;
+    height: 40px;
+}
+
+.nav_left_nav {
+    flex-grow: 3;
+    display: flex;
+    align-items: center;
+}
+
+.nav_left_nav li {
+    display: inline-block;
+    width: calc((100%-100px)/7);
+    height: 70px;
+}
+
+.nav_left_nav li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+    margin: 0 10px;
+}
+
+.first_a {
+    font-weight: bolder;
+    color: white;
+}
+
+.nav_left_nav ul li:first-child {
+    margin-left: 15px;
+}
+
+/* 导航右侧 */
+.nav_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+}
+
+.search {
+    width: 300px;
+    height: 30px;
+    padding-left: 20px;
+}
+
+.btn_search {
+    width: 50px;
+    height: 26px;
+    margin-left: -50px;
+    color: #83858B;
+}
+
+.btn_search:hover {
+    color: white;
+}
+
+.nav_right_login {
+    color: #83858B;
+    margin-left: 30px;
+}
+
+/* 轮播图 */
+.header {
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    height: auto;
+}
+
+.header_img {
+    width: 600px;
+    height: auto;
+}
+
+.header_img img {
+    width: 100%;
+}
+
+/* 小标签部分 */
+.section {
+    display: flex;
+    width: 1200px;
+    height: 40px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.section_a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section_a li {
+    display: flex;
+    width: calc(100%/13);
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.section_a li:hover a {
+    color: red;
+}
+
+.section_a li a {
+    width: 100%;
+}
+
+/* 盒子图片 */
+
+.section_box_title {
+    display: flex;
+    width: 1200px;
+    margin: auto;
+}
+
+.section_box_img_title {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+}
+
+.section_box_img_title h3 {
+    color: white;
+    font-weight: normal;
+}
+
+.section_box_img_title .gd {
+    width: 50px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* 图片 */
+.section_box_img {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 280px;
+    margin: auto;
+}
+
+.section_box_img_name {
+    width: calc(100%/4);
+    height: 200px;
+}
+
+.section_box_img_name img {
+    width: 80%;
+}
+
+.section_box_img_name h5 {
+    color: white;
+    font-weight: normal;
+    margin: 2px 0;
+    font-family: "楷体";
+}
+
+.section_box_img_name p {
+    color: #83858B;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 2px 0;
+    font-family: "楷体";
+}
+
+/* 热门歌单修改上述CSS */
+
+
+/* 新歌推荐模块 */
+.section_box_recommend {
+    display: flex;
+    width: 1200px;
+    height: 210px;
+    margin: auto;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section_box_recommend_box {
+    width: 380px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section_box_recommend_p {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* 略微过度 */
+
+.section_box_img_name img {
+    transition: all 0.5s linear;
+}
+
+/* 添加些许交互 */
+.section_box_img_name:hover img {
+    transform: scale(0.95, 0.95);
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.section_box_recommend_box {
+    transition: all 0.5s linear;
+}
+
+.section_box_recommend_box:hover {
+    transform: scale(0.95, 0.95);
+    box-shadow: 10px 10px 5px #888888;
+}
+
+/* 略微过度结束 */
+
+/* 热门歌手图片 */
+.section_box_title_box {
+    text-align: center;
+    color: white;
+    margin-left: 20px;
+}
+
+.section_box_title_box h5 {
+    margin-top: 10px;
+}
+
+.section_box_title_img {
+    width: 180px;
+    height: 180px;
+    border: 1px solid green;
+    overflow: hidden;
+    border-radius: 180px;
+    margin-top: 10px;
+}
+
+/* 过度 */
+.bb_tran {
+    transition: all 0.5s linear;
+}
+
+.bb_tran:hover {
+    transform: scale(1.1, 1.1);
+}
+
+
+/* 脚部之前 */
+.section_footer {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    background-color: #282828;
+}
+
+.section_footer_title {
+    display: flex;
+    width: 1200px;
+    height: 300px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_footer_box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    padding: 0 5px;
+}
+
+.box_broder {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    margin-right: 10px;
+    background-color: #303133;
+}
+
+.section_footer_title_li {
+    width: 450px;
+    height: 200px;
+}
+
+.box_broder_last {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    margin-right: 10px;
+    background-color: #303133;
+}
+
+.span {
+    color: #83858B;
+}
+
+/* 脚部 */
+.footer {
+    width: 100%;
+    height: 150px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 14px;
+}
